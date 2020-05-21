@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダイアログ</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+
+    <!-- モーダルでダイアログを開く -->
+    <div id="div1" style="display:none;">
+    <p>メッセージ</p>
+    </div>
+    <input type="button" id="button1" value="ボタン1" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(function() {
+        $("#button1").click(function() {
+            $("#div1").dialog({
+                modal:true, //モーダル表示
+                title:"テストダイアログ1", //タイトル
+                buttons: { //ボタン
+                "確認": function() {
+                    $(this).dialog("close");
+                    }
+                }
+            });
+        });
+    });ß
+</script>
+
+   
+    
+</body>
+</html>
+
+
